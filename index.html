@@ -27,7 +27,7 @@
     <body>
         <header>
             <nav>
-                <div class="row">
+                <div class="row"  id="sticky-navigation">
                     <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
                     <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
                     <ul class="main-nav js--main-nav">
@@ -90,48 +90,108 @@
             <ul class="meals-showcase clearfix">
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+                        <img src="resources//img/1.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Korean bibimbap with egg and vegetables">
                     </figure>
                 </li>
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+                        <img src="resources//img/2.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Simple italian pizza with cherry tomatoes">
                     </figure>
                 </li>
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/3.jpg" alt="Chicken breast steak with vegetables">
+                        <img src="resources//img/3.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Chicken breast steak with vegetables">
                     </figure>
                 </li>
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/4.jpg" alt="Autumn pumpkin soup">
+                        <img src="resources//img/4.jpg" onclick="openLightbox();toSlide(4)" class="hover-shadow preview" alt="Autumn pumpkin soup">
                     </figure>
                 </li>
             </ul>
             <ul class="meals-showcase clearfix">
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/5.jpg" alt="Paleo beef steak with vegetables">
+                        <img src="resources//img/5.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview" alt="Paleo beef steak with vegetables">
                     </figure>
                 </li>
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/6.jpg" alt="Healthy baguette with egg and vegetables">
+                        <img src="resources//img/6.jpg" onclick="openLightbox();toSlide(6)" class="hover-shadow preview" alt="Healthy baguette with egg and vegetables">
                     </figure>
                 </li>
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/7.jpg" alt="Burger with cheddar and bacon">
+                        <img src="resources//img/7.jpg" onclick="openLightbox();toSlide(7)" class="hover-shadow preview" alt="Burger with cheddar and bacon">
                     </figure>
                 </li>
                 <li>
                     <figure class="meal-photo">
-                        <img src="resources//img/8.jpg" alt="Granola with cherries and strawberries">
+                        <img src="resources//img/8.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview" alt="Granola with cherries and strawberries">
                     </figure>
                 </li>
             </ul>
+            <div id="Lightbox" class="modal">
+                <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                    <div class="modal-content">
+                    <div class="slide">
+                        <img src="resources/img/1.jpg" class="image-slide" alt="Korean bibimbap with egg and vegetables" />
+                    </div>
+                    <div class="slide">
+                        <img src="resources/img/2.jpg" class="image-slide" alt="Simple italian pizza with cherry tomatoes" />
+                    </div>    
+                    <div class="slide">
+                        <img src="resources/img/3.jpg" class="image-slide" alt="Chicken breast steak with vegetables" />
+                    </div>
+                    <div class="slide">
+                        <img src="resources/img/4.jpg" class="image-slide" alt="Autumn pumpkin soup" />
+                    </div>
+                    <div class="slide">
+                        <img src="resources/img/5.jpg" class="image-slide" alt="Paleo beef steak with vegetables" />
+                    </div> 
+                    <div class="slide">
+                        <img src="resources/img/6.jpg" class="image-slide" alt="Healthy baguette with egg and vegetables" />
+                    </div> 
+                    <div class="slide">
+                        <img src="resources/img/7.jpg" class="image-slide" alt="Burger with cheddar and bacon" />
+                    </div> 
+                    <div class="slide">
+                        <img src="resources/img/8.jpg" class="image-slide" alt="Granola with cherries and strawberries" />
+                    </div> 
+                
+                  <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+                  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                      
+                  <div class="dots">
+                        <div class="col">
+                            <img src="resources/img/1.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Korean bibimbap with egg and vegetables" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/2.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Simple italian pizza with cherry tomatoes" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/3.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Chicken breast steak with vegetables" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/4.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="Autumn pumpkin soup" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/5.jpg" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="Paleo beef steak with vegetables" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/6.jpg" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="Healthy baguette with egg and vegetables" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/7.jpg" class="modal-preview hover-shadow" onclick="toSlide(7)" alt="Burger with cheddar and bacon" />
+                        </div>
+                        <div class="col">
+                            <img src="resources/img/8.jpg" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="Granola with cherries and strawberries" />
+                        </div>
+                  </div>
+                </div> 
+            </div>
         </section>
+        
 
         <section class="section-steps" id="works">
             <div class="row">
@@ -430,6 +490,52 @@
         <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
         <script src="resources/js/script.js"></script>
-
+        <script>
+            
+            let slideIndex = 1;
+            showSlide(slideIndex);
+            
+            function openLightbox() {
+              document.getElementById('Lightbox').style.display = 'block';
+              document.getElementById('sticky-navigation').style.display = 'none';
+            };
+            
+            function closeLightbox() {
+              document.getElementById('Lightbox').style.display = 'none';
+              document.getElementById('sticky-navigation').style.display = 'block';
+            };
+            
+            function changeSlide(n) {
+              showSlide(slideIndex += n);
+            };
+            
+            function toSlide(n) {
+              showSlide(slideIndex = n);
+            };
+            
+            function showSlide(n) {
+              const slides = document.getElementsByClassName('slide');
+              let modalPreviews = document.getElementsByClassName('modal-preview');
+            
+              if (n > slides.length) {
+                slideIndex = 1;	
+              };
+              
+              if (n < 1) {
+                slideIndex = slides.length;
+              };
+            
+              for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              };
+              
+              for (let i = 0; i < modalPreviews.length; i++) {
+                modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+              };
+              
+              slides[slideIndex - 1].style.display = 'block';
+              modalPreviews[slideIndex - 1].className += ' active';
+            };
+          </script>
     </body>
 </html>
